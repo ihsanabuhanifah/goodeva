@@ -1,0 +1,54 @@
+# ==========================
+# Global ignores
+# ==========================
+node_modules/
+dist/
+build/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+.npmrc
+.yarnrc
+yarn-error.log
+
+#Post
+
+data
+
+# ==========================
+# Backend (NestJS)
+# ==========================
+backend/node_modules/
+backend/dist/
+backend/coverage/
+backend/logs/
+backend/tmp/
+backend/*.tsbuildinfo
+backend/data/
+
+# ==========================
+# Frontend (Vite / React)
+# ==========================
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+frontend/.vercel/
+frontend/.turbo/
+frontend/*.tsbuildinfo
+
+# NOTE:
+
+
+# ==========================
+# Editor / System files
+# ==========================
+.vscode/
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

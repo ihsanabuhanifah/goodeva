@@ -1,0 +1,22 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+# Install semua dependencies termasuk dev (agar bisa build)
+RUN npm install
+
+# Copy source code
+COPY . .
+
+# Build NestJS ke dist/
+RUN npm run build
+
+# Hapus devDependencies agar image lebih ringan
+RUN npm prune --production
+
+EXPOSE 3535
+
+# Jalankan hasil build langsung pakai Node.js
+CMD ["node", "dist/main.js"]
