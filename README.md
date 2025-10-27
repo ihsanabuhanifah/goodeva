@@ -1,2 +1,2 @@
-Buat file .env di backend
-jalankan docker compose up --build
+## Buat file .env di backend
+### jalankan docker compose up --build
